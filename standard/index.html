@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>H5项目规范 | 李星辰的文档</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="个人前端收集整理文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.68e7a1d0.js" as="script"><link rel="preload" href="/assets/js/2.189818c7.js" as="script"><link rel="preload" href="/assets/js/8.2d090a1d.js" as="script"><link rel="prefetch" href="/assets/js/3.56761812.js"><link rel="prefetch" href="/assets/js/4.bc7cf726.js"><link rel="prefetch" href="/assets/js/5.d250cb53.js"><link rel="prefetch" href="/assets/js/6.8779df89.js"><link rel="prefetch" href="/assets/js/7.46a61e12.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">李星辰的文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/standard/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  规范
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/standard/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  规范
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">Hello lixingchen</a></li><li><a href="/standard/" aria-current="page" class="active sidebar-link">H5项目规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/standard/#为什么要做规范" class="sidebar-link">为什么要做规范</a></li><li class="sidebar-sub-header"><a href="/standard/#pc端的项目目录结构" class="sidebar-link">PC端的项目目录结构</a></li><li class="sidebar-sub-header"><a href="/standard/#命名规范" class="sidebar-link">命名规范</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="h5项目规范"><a href="#h5项目规范" class="header-anchor">#</a> H5项目规范</h1> <h2 id="为什么要做规范"><a href="#为什么要做规范" class="header-anchor">#</a> 为什么要做规范</h2> <ol><li><p>提高工作效率，便于相互协调工作。</p></li> <li><p>实现代码一体化，无阻碍维护及修改。</p></li> <li><p>项目结构清晰，代码有序，提升框架质量。</p></li> <li><p>减少我们维护的时间成本</p></li></ol> <h2 id="pc端的项目目录结构"><a href="#pc端的项目目录结构" class="header-anchor">#</a> PC端的项目目录结构</h2> <div class="language- extra-class"><pre class="language-text"><code>├── build                      # 构建相关
+├── mock                       # 项目mock 模拟数据
+├── plop-templates             # 基本模板
+├── public                     # 静态资源
+│   │── favicon.ico            # favicon图标
+│   └── index.html             # html模板
+├── src                        # 源代码
+│   ├── api                    # 所有请求
+│   ├── assets                 # 主题 字体等静态资源
+│   ├── components             # 全局公用组件
+│   ├── directive              # 全局指令
+│   ├── filters                # 全局 filter
+│   ├── icons                  # 项目所有 svg icons
+│   ├── lang                   # 国际化 language
+│   ├── layout                 # 全局 layout
+│   ├── router                 # 路由
+│   ├── store                  # 全局 store管理
+│   ├── styles                 # 全局样式
+│   ├── utils                  # 全局公用方法
+│   ├── vendor                 # 公用vendor
+│   ├── views                  # views 所有页面
+│   ├── App.vue                # 入口页面
+│   ├── main.js                # 入口文件 加载组件 初始化等
+│   └── permission.js          # 权限管理
+├── tests                      # 测试
+├── .env.xxx                   # 环境变量配置
+├── .eslintrc.js               # eslint 配置项
+├── .babelrc                   # babel-loader 配置
+├── .travis.yml                # 自动化CI配置
+├── vue.config.js              # vue-cli 配置
+├── postcss.config.js          # postcss 配置
+└── package.json               # package.json
+</code></pre></div><h2 id="命名规范"><a href="#命名规范" class="header-anchor">#</a> 命名规范</h2> <ol><li><p>文件文件夹命名遵循以下原则</p> <p><code>短横拼接法</code>（kebab-case）</p> <div class="language- extra-class"><pre class="language-text"><code>├── my-component                   
+│   ├── index.vue                    
+</code></pre></div></li> <li><p>组件命名原则</p> <p>全局component：<code>大驼峰命名</code></p> <p>全局组件放在<code>src/components</code></p> <div class="language- extra-class"><pre class="language-text"><code>├── src                  
+│   ├── components
+│   		├── MyComponent
+│   				├── index.vue
+</code></pre></div><p>局部component：<code>大驼峰命名</code></p> <p>局部组件组件放在<code>当前页面文件/components</code></p> <div class="language- extra-class"><pre class="language-text"><code>├── views                  
+│   ├── my-page
+│   		├── components
+│   				├── MyComponent
+│   						├── index.vue
+</code></pre></div></li> <li><p>Js文件命名规范</p> <p>.js文件命名：<code>短横拼接法</code></p> <div class="language- extra-class"><pre class="language-text"><code>my-script.js
+</code></pre></div><p>Api文件命名：统一添加Api后缀</p> <div class="language- extra-class"><pre class="language-text"><code>my-pageApi.js
+</code></pre></div></li> <li><p>Vue文件命名规范</p> <p>.vue文件命名：<code>小驼峰命名法</code></p> <div class="language- extra-class"><pre class="language-text"><code>myVuePage.vue
+</code></pre></div></li> <li><p>Css文件命名规范</p> <p>.css/.less/.scss：<code>短横拼接法</code></p> <div class="language- extra-class"><pre class="language-text"><code>xxx-xxx-xxx..css
+</code></pre></div></li> <li><p>图片命名规范</p> <p>图片命名：<code>模块名称+具体页面名称+图片含义</code></p> <div class="language- extra-class"><pre class="language-text"><code>order-details-banner.png
+</code></pre></div></li> <li><p>代码变量和函数命名规范</p> <p>代码变量命名规范：常量必须大写</p> <p>函数命名命名规范：小驼峰命名法</p> <div class="language- extra-class"><pre class="language-text"><code>// 常量
+const CONTENT = 'content'
+// 函数命名
+function addNumber(){}
+</code></pre></div></li> <li><p>路由传值规范</p> <p>路由传值： <code>禁止传整个对象，具体到对象属性</code></p> <div class="language-vue extra-class"><pre class="language-vue"><code>this.$router.push({
+	path:&quot;/home&quot;,
+	query:{name:data.name}
+})
+</code></pre></div></li> <li><p>代码注释规范</p> <p>代码页面注释：<code>第一行描述清楚页面是做什么用的</code></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- 文档详情页 --&gt;</span>
+</code></pre></div></li> <li><p>代码注释规范
+data中的规范：<code>data中的属性明确声明的意义</code></p></li> <li><p>代码细节</p> <ul><li>所有的if都需要写括号，即使是一行代码</li> <li>所有的v-for都要带上key属性，增加遍历效率</li> <li>使用简化写法，比如v-bind:id,简化为:id</li> <li>判断语句、赋值语句适当的地方要加空格</li> <li>Class使用小写字母横线分割</li></ul></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/" class="prev router-link-active">
+        Hello lixingchen
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.68e7a1d0.js" defer></script><script src="/assets/js/2.189818c7.js" defer></script><script src="/assets/js/8.2d090a1d.js" defer></script>
+  </body>
+</html>
